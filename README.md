@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# Projeto de Viabilidade Financeira
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas `
 
-`DISCIPLINA`
+`Desenvolvimento Web-front`
 
-`SEMESTRE`
+`1º Semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Remilton Junior
+* Astor Almeida
+* Henrique Caramez
+* Marcos Maciel
+* Adrielle Cantão
+* Robson Abreu
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nathalia Assis Valentim
 
 ## Instruções de utilização
 
