@@ -6,7 +6,7 @@
 
 `1º Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido..
 
 ## Integrantes
 
