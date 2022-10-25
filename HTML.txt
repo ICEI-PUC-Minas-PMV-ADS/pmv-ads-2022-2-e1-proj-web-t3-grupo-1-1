@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>TESTE DE APLICAÇÃO DOS BUTTONS</h1>
+<body>
+    <h2> Segue abaixo alguns exemplos de buttons e como são inseridos:</h2>
+    <p> Tenho a prática de criar uma <strong>DIV</strong> e atribuí-la uma <strong>CLASS</strong> para que fique mais fácil aplicar propriedades específicas a cada uma na edição do <strong>CSS</strong>, como por exemplo cores de fundo, fonte, posicionamento.</p>
+    <div class="Teste1"> <p>O botão a seguir do tipo <strong>BUTTON</strong> pode ser preenchido com o nome que quiser no campo <strong>VALUE</strong></p> <input type="button" value="Botão 1"></div>
+    <div class="Teste2"> <p>O botão a seguir do tipo <strong>NUMBER</strong> solicita que o usuário insira algum número.</p><input type="number" name="Número" id=""></div>
+    <div class="Calendario1"> <p>O botão a seguir do tipo <strong>DATE</strong> solicita que o usuário preencha alguma data.</p><input type="date" name="calendario1" id=""></div>
+<footer>Basta inserir a função <strong>input</strong> e explorar na prática as funções que são disponibilizadas para que fique mais claro o entendimento.</footer>
+
+</body>
+</html>

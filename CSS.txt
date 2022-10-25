@@ -1,0 +1,47 @@
+/*Título da página - "TESTE DE APLICAÇÃO DOS BUTTONS" */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: center;
+    color: black;
+    background-color: lightgreen;
+}
+
+/*Subtítulo da Página - "SEGUE ABAIXO ALGUNS EXEMPLOS"... */
+h2{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: medium;
+color: black;
+background-color: lightgoldenrodyellow;
+}
+
+/* Altera as propriedades dos parágrafos (p) que estão dentro do body)*/
+body p{
+    background-color: lightgray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Altera apenas os parágrafos (p) que estão na div de class Teste1*/
+div.Teste1 p{
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Altera apenas os parágrafos (p) que estão na div de class Teste2*/
+div.Teste2 p{
+    background-color: orange;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Altera apenas os parágrafos (p) que estão na div de class Calendario1*/
+div.Calendario1 p{
+    background-color: lime;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Edita o rodapé da página (footer)*/
+footer{
+    text-align: center;
+    color: white;
+    background-color: brown;
+}
