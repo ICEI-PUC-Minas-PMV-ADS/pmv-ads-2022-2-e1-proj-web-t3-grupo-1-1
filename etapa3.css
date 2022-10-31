@@ -1,0 +1,32 @@
+div{
+    display: inline-block;
+    border: rgb(0, 0, 0) solid 3px;
+    width: 100%;
+    background-color:lightslategray;
+    color: black;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    width: calc(20% - 5px);
+   
+}
+header{
+    border: black solid 5px;
+    width: 97%;
+    text-align: center;
+    background-color: lightslategray;
+    color: black;
+
+    
+}
+
+.grafico{
+    background-color: lightslategray;
+    display: inline-block;
+    width:calc(33%);
+    border: black solid 3px;
+    padding: 5px;
+}
+
+body{
+    background-color: white;
+}
