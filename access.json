@@ -1,0 +1,33 @@
+[
+        {
+            "id": 1,
+            "login": "astor",
+            "password": "12345"
+        },
+        {
+            "id": 2,
+            "login": "adrielle",
+            "password": "23456" 
+        },
+        {
+            "id": 3,
+            "login": "henrique",
+            "password": "34567"             
+        },
+        {
+            "id": 4,
+            "login": "marcos",
+            "password": "45678"             
+
+        },
+        {
+            "id": 5,
+            "login": "remilton",
+            "password": "56789"
+        },
+        {
+            "id": 6,
+            "login": "henrique",
+            "password": "67890"
+        }
+]
