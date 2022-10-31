@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 4 - Viabilidade</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>  
+            <h1>VIABILIDADE FINANCEIRA - HISTÓRICO E LANÇAMENTOS</h1>
+    
+        <div class="iniciar"> <input type="button" value="Iniciar"> </div>
+        
+        <div class="editar"> <input type="button" value="Editar"> </div>
+        
+        <div class="voltar"> <input type="button" value="Voltar"> </div> 
+    
+        <div class="Data"><input type="date" name="Data" id="1"></div>
+    
+        <div class="Filtrar"> <input type="button" value="Filtrar Data"> </div>
+    
+        <table border="1" class="table1">
+            <td>Cod</td>
+            <td>Data</td>
+            <td>Descrição-Histórico</td>
+            <td>Valor</td>
+            <td>Natureza</td>
+            <td>E/S</td>
+        </tr>
+        <tr>
+            <td>159</td>
+            <td>24/10/2022</td>
+            <td>Combustível</td>
+            <td>R$150</td>
+            <td>Locomoção</td>
+            <td>Saída</td>
+        </tr>
+        
+            
+        </table>
+        <table border="1" class="table2">
+    
+            <caption> Grid de Lançamentos</caption>
+    
+            <tr class="titulo2">
+                <td>Cod</td>
+                <td>Data</td>
+                <td>Descrição-Histórico</td>
+                <td>Valor</td>
+                <td>Natureza</td>
+                <td>E/S</td>
+            </tr>
+            <tr>
+                <td>159</td>
+                <td>24/10/2022</td>
+                <td>Combustível</td>
+                <td>R$150</td>
+                <td>Locomoção</td>
+                <td>Saída</td>
+            </tr>
+            <tr>
+                <td>254</td>
+                <td>20/10/2022</td>
+                <td>Adiantamento</td>
+                <td>R$2000</td>
+                <td>Trabalho</td>
+                <td>Entrada</td>
+            </tr>
+            <tr>
+                <td>365</td>
+                <td>15/10/2022</td>
+                <td>Refeição</td>
+                <td>R$59,90</td>
+                <td>Alimentação</td>
+                <td>Saída</td>
+            </tr>
+            </tr>
+        </table>
+    <footer>
+        VIABILIDADE FINANCEIRA
+    </footer>
+    </body>
+    
+    </html>
