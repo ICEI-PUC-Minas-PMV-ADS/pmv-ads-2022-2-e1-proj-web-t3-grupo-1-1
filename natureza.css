@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 html {
    height: 100%;
 }
@@ -7,10 +6,6 @@ html {
 body {
    height: 100%;
    background-color: #efecec;
-}
-
-body {
-   background: var(--Back-color)
 }
 
 .body {
@@ -19,7 +14,6 @@ body {
 
 #body-container {
    background: url(/assets/Finance\ app-rafiki.svg) no-repeat;
-<<<<<<< HEAD
    background-position: 0vw bottom;
    margin-left: 0;
    height: 100%;
@@ -47,103 +41,3 @@ body {
    align-items: center;
    justify-content: center;
 }
-=======
-:root {
-    --Back-color: #efecec
- }
- 
- *{
-    margin: 0;
-    padding: 0;
-    border: 0;
- }
- 
- body {
-    background: var(--Back-color)
- }
-=======
-html {
-   height: 100%;
-}
->>>>>>> cf1ec4c (Alteração da página de inclusão da Natureza dos Lançamentos)
-
-body {
-   height: 100%;
-   background-color: #efecec;
-}
-
-body {
-   background: var(--Back-color)
-}
-
-.body {
-   height: 100%;
-}
-
-<<<<<<< HEAD
- .buttons {
-    display: flex;
-    justify-content: space-between;
- }
- 
- header, footer {
-    display: flex;
-    height: 8;
-    width: auto;
-    justify-content: center;
- }
- 
- h3, h4 {
-    align-self: center;
- }
- 
- footer {
-    margin-bottom: 10px;
- }
- 
- #insert,  #abort {
-    width: 33.3333%;
-    margin-top: 30px;
-    height: 40px;
-    padding: 0 83px;
-    font-size: 1.2rem;
-    color: #fff;
-    border-radius: 10px;
-    background-color: rgb(34, 121, 243);
-    display: flex;
-    justify-content: center;
- }
->>>>>>> 650c136 (Page Natureza)
-=======
-#body-container {
-   background: url(/assets/Next\ steps-rafiki.svg) no-repeat;
-=======
->>>>>>> 27c2174 (Tentando incluir as paginas)
-   background-position: 0vw bottom;
-   margin-left: 0;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-
-.form-data {
-   margin-left: 35%;
-}
-
-#floatingTextarea {
-   display: inline;
-}
-
-.title {
-   padding-top: 30px;
-}
-
-.form-primary {
-   display: flex;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-}
->>>>>>> cf1ec4c (Alteração da página de inclusão da Natureza dos Lançamentos)
