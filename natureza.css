@@ -19,6 +19,7 @@ body {
 
 #body-container {
    background: url(/assets/Finance\ app-rafiki.svg) no-repeat;
+<<<<<<< HEAD
    background-position: 0vw bottom;
    margin-left: 0;
    height: 100%;
@@ -116,6 +117,8 @@ body {
 =======
 #body-container {
    background: url(/assets/Next\ steps-rafiki.svg) no-repeat;
+=======
+>>>>>>> 27c2174 (Tentando incluir as paginas)
    background-position: 0vw bottom;
    margin-left: 0;
    height: 100%;
