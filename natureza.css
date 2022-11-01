@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 html {
    height: 100%;
 }
@@ -59,63 +60,26 @@ body {
  body {
     background: var(--Back-color)
  }
+=======
+html {
+   height: 100%;
+}
+>>>>>>> cf1ec4c (Alteração da página de inclusão da Natureza dos Lançamentos)
 
- main {
-    display: flex;
- }
+body {
+   height: 100%;
+   background-color: #efecec;
+}
 
- .choise {
-    display: flex;
- }
+body {
+   background: var(--Back-color)
+}
 
- .choise label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5px 10px;
- }
- 
- #page-natureza{
-    height: 100vh;
-    margin-left: 0;
- }
- 
- .content {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
- }
- 
- .data-input {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    height: 90vh;
-    align-items: center;
-    justify-content: center;
- }
- 
- .itens-data-label {
-    font-size: 140%;
-    height: 50px;
-    width: 700px;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 10px;
- }
- 
- .itens-data-text {
-    font-size: 130%;
-    height: 60px;
-    width: 700px;
-    text-align: center;
-    border-radius: 10px;
- }
+.body {
+   height: 100%;
+}
 
+<<<<<<< HEAD
  .buttons {
     display: flex;
     justify-content: space-between;
@@ -149,3 +113,34 @@ body {
     justify-content: center;
  }
 >>>>>>> 650c136 (Page Natureza)
+=======
+#body-container {
+   background: url(/assets/Next\ steps-rafiki.svg) no-repeat;
+   background-position: 0vw bottom;
+   margin-left: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-data {
+   margin-left: 35%;
+}
+
+#floatingTextarea {
+   display: inline;
+}
+
+.title {
+   padding-top: 30px;
+}
+
+.form-primary {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+>>>>>>> cf1ec4c (Alteração da página de inclusão da Natureza dos Lançamentos)
