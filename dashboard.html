@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="dashboard.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -47,9 +49,67 @@
             <div id="menu-content">
                 <section id="content-duo-date">
                     <label for=""><strong>Próximos Vencimentos</strong></label>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Valor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 <section id="content-graphic">
                     <label for=""><strong>Natureza dos Gastos</strong></label>
+                    <div class="calendar-date">
+                        <label for="">Período para análise dos gastos</label>
+                        <div class="filter-date">
+                            <input type="date" name="date-graphicI" id="date-graphicI" title="Data Inicial do Gráfico">
+                            <strong>a</strong>
+                            <input type="date" name="date-graphicF" id="date-graphicF" title="Data Final do Gráfico">
+                        </div>
+                    </div>
+    
+                    <div id="data-graphic"></div>
                 </section>
             </div>
         </div>

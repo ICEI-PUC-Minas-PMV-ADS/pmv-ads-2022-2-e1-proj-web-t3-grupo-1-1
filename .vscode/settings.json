@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
         "buttons",
-        "MENSAGEM"
+        "corechart",
+        "grafico",
+        "MENSAGEM",
+        "opcoes"
     ],
     "cSpell.ignoreWords": [
         "ENTRAR",
@@ -13,5 +16,6 @@
         "SENHA",
         "choise",
         "rafiki"
-    ]
+    ],
+    "cSpell.language": "pt-BR,pt,en,en-GB,en-US,lorem"
 }
