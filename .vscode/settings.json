@@ -15,7 +15,11 @@
         "PÁGINA",
         "RODAPÉ",
         "SENHA",
+        "calendario",
         "choise",
+        "conteudo",
+        "descricao",
+        "lancamento",
         "rafiki"
     ],
     "cSpell.language": "pt-BR,pt,en,en-GB,en-US,lorem"
