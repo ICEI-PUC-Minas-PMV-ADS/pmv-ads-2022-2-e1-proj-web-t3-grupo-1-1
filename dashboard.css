@@ -95,12 +95,10 @@ html {
    background-color: #efecec;
    text-align: center;
   }
- 
- 
+
  
  /* 
  flex-wrap = wrap => mantem a largura do flex
  justify-content = space-around => coloca a largura a partir do tamannho e margens
  justify-content = space-between => coloca a largura a partir do tamannho e desconsider as margens do primeiro e último
- https://developers.google.com/chart/interactive/docs/gallery/piechart
  *\
