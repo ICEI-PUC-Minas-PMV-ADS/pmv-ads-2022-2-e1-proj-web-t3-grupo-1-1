@@ -21,9 +21,14 @@
                         if (nameUser == i.login) {
                                 if (passwordUser == i.password) {
                                         door = "open"
-                                } else { door = "close"}
+                                        document.getElementById("entrada-sistema").setAttribute('onsubmit', 'return false')
+                                } else { 
+                                        door = "close"
+                                        document.getElementById("entrada-sistema").setAttribute('onsubmit', 'return true') 
+                                }
                         }
+                })
+                if (door == "open") {
+                        window.location.href = "http://127.0.0.1:5500/dashboard.html";
                 }
-        )}
-
-        
+        }
