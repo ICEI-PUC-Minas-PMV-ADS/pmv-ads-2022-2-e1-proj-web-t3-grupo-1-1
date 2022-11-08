@@ -7,7 +7,7 @@ function desenharPizza(){
     tabela.addRows([
         ['Alimentação', 5000],
         ['Transporte', 2500],
-        ['Frete', 2800]
+        ['Frete', 280]
     ]);
     
     var opcoes = {
@@ -21,7 +21,7 @@ function desenharPizza(){
         is3D: true
     }
 
-    var grafico = new google.visualization.PieChart(document.getElementById('data-graphic'));
+    var grafico = new google.visualization.PieChart(document.getElementById('data-graphic-economico'));
         grafico.draw(tabela, opcoes);
 }
 
