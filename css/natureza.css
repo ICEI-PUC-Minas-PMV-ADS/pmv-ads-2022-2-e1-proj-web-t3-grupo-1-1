@@ -1,0 +1,43 @@
+
+html {
+   height: 100%;
+}
+
+body {
+   height: 100%;
+   background-color: #efecec;
+}
+
+.body {
+   height: 100%;
+}
+
+#body-container {
+   background: url(/assets/Finance\ app-rafiki.svg) no-repeat;
+   background-position: 0vw bottom;
+   margin-left: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-data {
+   margin-left: 35%;
+}
+
+#floatingTextarea {
+   display: inline;
+}
+
+.title {
+   padding-top: 30px;
+}
+
+.form-primary {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}

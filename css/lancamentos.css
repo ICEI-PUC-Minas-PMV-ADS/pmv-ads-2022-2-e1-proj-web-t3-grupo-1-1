@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+ }
+ 
+ body {
+    height: 100%;
+    background-color: #efecec;
+ }
+ 
+ .body {
+    height: 100%;
+ }
+
+ #body-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 58px 10px 58px 10px;
+ }
+
+ #menu-content {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+ }
+
+ #menu-bar {
+    padding: 0 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+ }
+
+ .nav-item {
+    padding: 0 30px;
+ }
+
+  #content-filter label {
+   font-size: 1.2rem;
+   width: 98%;
+   text-align: center;
+ }
+
+ #menu-content section {
+   padding: 0 5px 5px;
+ }
+
+ #content-table label {
+   font-size: 1.2rem;
+   width: 98%;
+   text-align: center;
+ }
+
+ #content-table {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+ }
+
+ .filter-date {
+   text-align: center;
+ }
+
+ .calendar-date {
+    width: 80%;
+    align-items: center;
+ }
+
+ .calendar-date label {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+ }
+
+#date-graphicI, #date-graphicF {
+   background-color: #efecec;
+   text-align: center;
+  }
+
+  #botao-filtrar {
+    display: flex;
+    padding: 20px 100px 20px 80px;
+  }

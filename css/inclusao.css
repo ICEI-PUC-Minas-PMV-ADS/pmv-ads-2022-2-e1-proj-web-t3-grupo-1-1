@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+ }
+ 
+ body {
+    height: 100%;
+    background-color: #efecec;
+ }
+ 
+ .body {
+    height: 100%;
+ }
+
+ #body-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 58px 10px 58px 10px;
+ }
+
+ .menor-conteudo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+ }
+
+ #tipo-lancamento {
+    padding-top: 20px;
+    padding-bottom: 20px;
+ }
+ 
+ #natureza-lancamento {
+    padding-top: 20px;
+    padding-bottom: 50%;
+ }
+
+ #natureza-lancamento label {
+    font-size: 1.3rem;
+ }
+
+ #natureza-lancamento select {
+    font-size: 0.8rem;
+ }
+
+ .btn-warning {
+    margin-top: 30px;
+    font-size: 1.3rem;
+ }
+
+ .title {
+    margin-left: 15px;
+    margin-bottom: 20px;
+ }
+
+ .calendario-lançamento {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+ }
+
+ .calendario-lançamento label, .calendario-lançamento input, .descricao-conteudo label {
+    text-align: center;
+    font-size: 1.3rem;
+ }
+
+ .maior-conteudo {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    height: 100%;
+ }
+
+ .descricao-conteudo {
+    padding-top: 10px;
+ }
+
+ .input-group, .inserir-conteudo {
+    padding-top: 30px;
+    padding-left: 25%;
+    padding-right: 25%;
+ }
