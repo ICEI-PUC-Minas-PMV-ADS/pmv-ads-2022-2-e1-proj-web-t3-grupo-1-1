@@ -8,6 +8,8 @@
         "opcoes"
     ],
     "cSpell.ignoreWords": [
+        "Codigo",
+        "Descriçao",
         "ENTRAR",
         "Entrada",
         "Figura",
@@ -15,13 +17,21 @@
         "PÁGINA",
         "RODAPÉ",
         "SENHA",
+        "adrielle",
         "calendario",
         "choise",
+        "coloboradores",
         "conteudo",
         "descricao",
+        "descriçao",
         "economico",
         "lancamento",
-        "rafiki"
+        "lancamentos",
+        "mydate",
+        "padstart",
+        "rafiki",
+        "remilton",
+        "salarios"
     ],
     "cSpell.language": "pt-BR,pt,en,en-GB,en-US,lorem"
 }

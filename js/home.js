@@ -9,7 +9,7 @@
         var xhr = new XMLHttpRequest();
         xhr.onload = users;
         xhr.onerror = error;
-        xhr.open('GET', "access.json", false);
+        xhr.open('GET', "/src/access.json", false);
         xhr.send();
         
         function validate() {

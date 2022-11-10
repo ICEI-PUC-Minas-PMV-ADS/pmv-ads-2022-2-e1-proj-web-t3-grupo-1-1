@@ -43,7 +43,7 @@ html {
     align-items: center;
  }
 
- #date-atual{
+ #data-dashboard{
     max-width: 200px;
  }
 
@@ -91,7 +91,7 @@ html {
    padding: 20px 20px;
  }
 
-  #date-atual, #date-graphicI, #date-graphicF {
+  #data-dashboard, #date-graphicI, #date-graphicF {
    background-color: #efecec;
    text-align: center;
   }
