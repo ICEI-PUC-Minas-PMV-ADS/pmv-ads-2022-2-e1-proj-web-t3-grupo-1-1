@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/dashboard.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="/js/dashboard.js"></script>
+    <script src="/js/lancamentos.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -24,21 +26,31 @@
                     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                         <ul class="navbar-nav mr-auto">
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Lançamentos <span class="sr-only">(página atual)</span></a>
+                            <a class="nav-link" href="http://127.0.0.1:5500/lancamentos.html">Lançamentos <span class="sr-only">(página atual)</span></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Informações</a>
+                            <a class="nav-link" href="http://127.0.0.1:5500/economico.html">Informações</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Sair</a>
+                            <a class="nav-link" href="http://127.0.0.1:5500/home.html">Sair</a>
                           </li>
 
                         </ul>
                     </div>
                 </nav>
                 <div class="calendar-date">
-                    <label for="date-atual">Data atual para Dashboard</label>
-                    <input type="date" name="date-atual" id="date-atual" title="Data Atual">
+                    <label for="data-dashboard">Data atual para Dashboard</label>
+                    <input type="date" name="data-dashboard" id="data-dashboard" title="Data Atual" value="">
+                    
+                    <script>
+                        var today = new Date().toLocaleDateString();
+                        var dd = today.slice(0,2);
+                        var dm = today.slice(3,5);
+                        var dy = today.slice(6,10);
+                        var mydate = dy + "-" + dm  + "-" + dd;
+                        document.getElementById("data-dashboard").value = mydate;
+                    </script>
+
                 </div>
                 <div class="status-money">
                     <p><strong>O saldo atual do caixa é: </strong></p>
@@ -49,52 +61,16 @@
             <div id="menu-content">
                 <section id="content-duo-date">
                     <label for=""><strong>Próximos Vencimentos</strong></label>
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="tbVencimentos">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Valor</th>
+                            <th scope="col" id="1">#</th>
+                            <th scope="col" id="2">Data</th>
+                            <th scope="col" id="3">Descrição</th>
+                            <th scope="col" id="4">Valor</th>
                           </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <tbody id="tbRegistroVencimento">
                         </tbody>
                     </table>
                 </section>
@@ -119,6 +95,22 @@
                     <h6>RODAPÉ DA PÁGINA</h6>
                 </footer>
             </div>
-    </div>                
+    </div>
+    <script>
+        let tbBody = document.getElementById('tbRegistroVencimento');
+        
+        for ( i=0; i < db.registros.length; i++ ) {
+            let tr = tbBody.insertRow();
+            let tdCodigo = tr.insertCell();
+            let tdData = tr.insertCell();
+            let tdDescriçao = tr.insertCell();
+            let tdValor = tr.insertCell();
+
+            tdCodigo.innerText = db.registros[i].Cod;
+            tdData.innerText = db.registros[i].Data;
+            tdDescriçao.innerText = db.registros[i].Descriçao;
+            tdValor.innerText = db.registros[i].Valor;
+        }
+    </script>              
 </body>
 </html>

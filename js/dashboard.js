@@ -26,3 +26,11 @@ function desenharPizza(){
 }
 
 google.charts.setOnLoadCallback(desenharPizza);
+
+//function DataAtualDashboard() {
+//    const today = new Date().toLocaleDateString();
+//    var dy = String(today.getDate()).padStart(2, '0');
+//    var mt = string((today.getMonth()+1)).padStart(2, '0');
+//    var yr = string(today.getFullYear());
+//}
+// DataAtualDashboard();
