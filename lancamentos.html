@@ -48,7 +48,7 @@
         </div>
                 
             <div id="menu-content">
-                <section id="content-filter">
+                <div id="content-filter">
                     <label for=""><strong>Escolher os parâmetros para filtrar</strong></label>
                     <table class="table table-striped">
                         <thead>
@@ -60,27 +60,29 @@
                             <th scope="col">E/C</th>
                           </tr>
                         </thead>
-                        <tbody">
+                        <tbody>
                         </tbody>
                     </table>
-                </section>
-                <section id="content-table">
+                </div>
+                <div id="content-table">
                     <label for=""><strong>Lançamentos efetuados! Verifique os Filtros aplicados.</strong></label>
-                    <table class="table table-striped table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col">Cód</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Descrição / Histórico</th>
-                            <th scope="col">Valor</th>
-                            <th scope="col">Natureza</th>
-                            <th scope="col">E/C</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tbRegistros">
-                        </tbody>
-                    </table>
-                </section>
+                    <div class="table-wrapper">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">Cód</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Descrição / Histórico</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Natureza</th>
+                                <th scope="col">E/C</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tbRegistros">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
             <div class="fixed-bottom">
