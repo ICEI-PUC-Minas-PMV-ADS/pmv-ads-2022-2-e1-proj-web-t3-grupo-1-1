@@ -56,8 +56,9 @@ html {
  #content-table {
    display: flex;
    flex-direction: column;
-   height: 100%;
    width: 100%;
+   margin-bottom: 5rem;
+   max-height: 80%;
  }
 
  .filter-date {
@@ -84,3 +85,9 @@ html {
     display: flex;
     padding: 20px 100px 20px 80px;
   }
+
+  .table-wrapper {
+   overflow-y: auto;
+   max-height: 77%;
+   margin-bottom: 50px;
+}

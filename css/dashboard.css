@@ -12,7 +12,7 @@ html {
  }
 
  #body-container {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-top: 58px;
@@ -24,7 +24,7 @@ html {
     padding-top: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100%;
+   height: 70vh;
     width: 100%;
  }
 
@@ -61,6 +61,10 @@ html {
    text-align: center;
  }
 
+ #content-duo-date{
+   max-height: 75vh;
+ } 
+
  #menu-content section {
    padding: 0 5px 5px;
  }
@@ -74,13 +78,11 @@ html {
  #content-graphic {
    display: flex;
    flex-direction: column;
-   height: 100%;
    width: 100%;
+   height: 100%;
  }
 
  #data-graphic {
-   display: flex;
-   height: 70%;
    width: 100%;
  }
 
@@ -96,6 +98,11 @@ html {
    text-align: center;
   }
 
+  .table-wrapper {
+   overflow-y: auto;
+   max-height: 85%;
+   margin-bottom: 50px;
+}
  
  /* 
  flex-wrap = wrap => mantem a largura do flex

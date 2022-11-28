@@ -43,12 +43,7 @@
                     <input type="date" name="data-dashboard" id="data-dashboard" title="Data Atual" value="">
                     
                     <script>
-                        var today = new Date().toLocaleDateString();
-                        var dd = today.slice(0,2);
-                        var dm = today.slice(3,5);
-                        var dy = today.slice(6,10);
-                        var mydate = dy + "-" + dm  + "-" + dd;
-                        document.getElementById("data-dashboard").value = mydate;
+                        DataAtual();
                     </script>
 
                 </div>
@@ -59,22 +54,24 @@
             </div>
                 
             <div id="menu-content">
-                <section id="content-duo-date">
+                <div id="content-duo-date">
                     <label for=""><strong>Próximos Vencimentos</strong></label>
-                    <table class="table table-striped" id="tbVencimentos">
-                        <thead>
-                          <tr>
-                            <th scope="col" id="1">#</th>
-                            <th scope="col" id="2">Data</th>
-                            <th scope="col" id="3">Descrição</th>
-                            <th scope="col" id="4">Valor</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tbRegistroVencimento">
-                        </tbody>
-                    </table>
-                </section>
-                <section id="content-graphic">
+                    <div class="table-wrapper">
+                        <table class="table table-striped" id="tbVencimentos">
+                            <thead>
+                            <tr>
+                                <th scope="col" id="1">#</th>
+                                <th scope="col" id="2">Data</th>
+                                <th scope="col" id="3">Descrição</th>
+                                <th scope="col" id="4">Valor</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tbRegistroVencimento">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="content-graphic">
                     <label for=""><strong>Natureza dos Gastos</strong></label>
                     <div class="calendar-date">
                         <label for="">Período para análise dos gastos</label>
@@ -86,7 +83,7 @@
                     </div>
     
                     <div id="data-graphic"></div>
-                </section>
+                </div>
             </div>
         </div>
             
@@ -97,20 +94,8 @@
             </div>
     </div>
     <script>
-        let tbBody = document.getElementById('tbRegistroVencimento');
-        
-        for ( i=0; i < db.registros.length; i++ ) {
-            let tr = tbBody.insertRow();
-            let tdCodigo = tr.insertCell();
-            let tdData = tr.insertCell();
-            let tdDescriçao = tr.insertCell();
-            let tdValor = tr.insertCell();
-
-            tdCodigo.innerText = db.registros[i].Cod;
-            tdData.innerText = db.registros[i].Data;
-            tdDescriçao.innerText = db.registros[i].Descriçao;
-            tdValor.innerText = db.registros[i].Valor;
-        }
+        PreencherVencimentos();
+        PreencherGrafico();
     </script>              
 </body>
 </html>

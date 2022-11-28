@@ -1,5 +1,8 @@
 google.charts.load('current', {'packages': ['corechart']});
 
+
+var dataHoje = new Date;
+
 function desenharPizza(){
     var tabela = new google.visualization.DataTable();
     tabela.addColumn('string', 'Natureza');
@@ -27,10 +30,40 @@ function desenharPizza(){
 
 google.charts.setOnLoadCallback(desenharPizza);
 
-//function DataAtualDashboard() {
-//    const today = new Date().toLocaleDateString();
-//    var dy = String(today.getDate()).padStart(2, '0');
-//    var mt = string((today.getMonth()+1)).padStart(2, '0');
-//    var yr = string(today.getFullYear());
-//}
-// DataAtualDashboard();
+function PreencherVencimentos() {
+    let tbBody = document.getElementById('tbRegistroVencimento');
+    for ( i=0; i < db.registros.length; i++ ) {
+        let tr = tbBody.insertRow();
+        let tdCodigo = tr.insertCell();
+        let tdData = tr.insertCell();
+        let tdDescriçao = tr.insertCell();
+        let tdValor = tr.insertCell();
+        var tbGrafico = [];
+        var today = new Date()
+        for ( i=0; i < db.registros.length; i++ ) {
+            var strData = db.registros[i].Data;
+            var partesData = strData.split("/");
+            var dataL = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+            if(dataL > today) {
+                tdCodigo.innerText = db.registros[i].Cod;
+                tdData.innerText = db.registros[i].Data;
+                tdDescriçao.innerText = db.registros[i].Descriçao;
+                tdValor.innerText = Number(db.registros[i].Valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+            }
+        }
+
+    }
+}
+
+function PreencherGrafico(){
+
+}
+
+function DataAtual(){
+    var today = new Date().toLocaleDateString();
+                        var dd = today.slice(0,2);
+                        var dm = today.slice(3,5);
+                        var dy = today.slice(6,10);
+                        var mydate = dy + "-" + dm  + "-" + dd;
+                        document.getElementById("data-dashboard").value = mydate;
+}
