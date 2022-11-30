@@ -3,7 +3,7 @@ html {
  }
  
  body {
-    height: 100%;
+    height: 96%;
     background-color: #efecec;
  }
  
@@ -37,12 +37,6 @@ html {
     padding: 0 30px;
  }
 
-  #content-filter label {
-   font-size: 1.2rem;
-   width: 98%;
-   text-align: center;
- }
-
  #menu-content section {
    padding: 0 5px 5px;
  }
@@ -58,7 +52,7 @@ html {
    flex-direction: column;
    width: 100%;
    margin-bottom: 5rem;
-   max-height: 80%;
+   max-height: 90%;
  }
 
  .filter-date {
@@ -88,6 +82,6 @@ html {
 
   .table-wrapper {
    overflow-y: auto;
-   max-height: 77%;
-   margin-bottom: 50px;
+   max-height: 90%;
+   margin-bottom: 30px;
 }

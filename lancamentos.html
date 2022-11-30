@@ -44,26 +44,10 @@
                         <input type="date" name="date-graphicF" id="date-graphicF" title="Data Final do Gráfico">
                     </div>
                 </div>
-                <div id="botao-filtrar"><input class="btn btn-outline-info btn-lg" type="button" value="Filtrar"></div>
+                <div id="botao-filtrar"><input class="btn btn-outline-info btn-lg" type="button" value="Filtrar" onclick=ApresentarLançamentos()></div>
         </div>
                 
             <div id="menu-content">
-                <div id="content-filter">
-                    <label for=""><strong>Escolher os parâmetros para filtrar</strong></label>
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">Cód</th>
-                            <th scope="col">Descrição / Histórico</th>
-                            <th scope="col">Valor</th>
-                            <th scope="col">Natureza</th>
-                            <th scope="col">E/C</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
                 <div id="content-table">
                     <label for=""><strong>Lançamentos efetuados! Verifique os Filtros aplicados.</strong></label>
                     <div class="table-wrapper">
@@ -82,6 +66,7 @@
                             </tbody>
                         </table>
                     </div>
+                    <input type="text" id="SaldoFiltrado">
                 </div>
             </div>
         </div>
