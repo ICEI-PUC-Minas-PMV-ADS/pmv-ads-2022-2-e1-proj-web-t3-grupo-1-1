@@ -2,7 +2,7 @@ var db = {
 	registros: [
 		{		
 			"Cod": 1,	
-			"Data": "01/08/2022",	
+			"Data": "01/12/2022",	
 			"Descriçao": "Compra de biscoito para lanche conforme NF em anexo via caixa nesta data",	
 			"Valor": 800.00,	
 			"Natureza": "Alimentação",	
@@ -10,7 +10,7 @@ var db = {
 		},
 		{		
 			"Cod": 2,	
-			"Data": "01/08/2022",	
+			"Data": "01/12/2022",	
 			"Descriçao": "Pagamento de conta de luz conforme NF em anexo via caixa nesta data",	
 			"Valor": 300.00,	
 			"Natureza": "Infraestrutura",	

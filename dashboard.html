@@ -49,7 +49,7 @@
                 </div>
                 <div class="status-money">
                     <p><strong>O saldo atual do caixa é: </strong></p>
-                    <input class="form-control" type="text" placeholder="R$ 0,00" readonly>
+                    <input class="form-control" id="SaldoCaixa" type="text" placeholder="R$ 0,00" readonly>
                 </div>
             </div>
                 
@@ -78,7 +78,7 @@
                         <div class="filter-date">
                             <input type="date" name="date-graphicI" id="date-graphicI" title="Data Inicial do Gráfico">
                             <strong>a</strong>
-                            <input type="date" name="date-graphicF" id="date-graphicF" title="Data Final do Gráfico">
+                            <input type="date" name="date-graphicF" id="date-graphicF" title="Data Final do Gráfico" onchange=Graficar()>
                         </div>
                     </div>
     
@@ -95,7 +95,7 @@
     </div>
     <script>
         PreencherVencimentos();
-        PreencherGrafico();
+        Graficar();
     </script>              
 </body>
 </html>
