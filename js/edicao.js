@@ -34,7 +34,9 @@ function updateRegistro(Cod) {
 }
 
 function Alteraçao(){
+    alert('Edição do Registro número ' + chave + "\n realizada com sucesso!")
     updateRegistro(chave);
+    Cancelar();
 }
 
 function SelectTipo(){
