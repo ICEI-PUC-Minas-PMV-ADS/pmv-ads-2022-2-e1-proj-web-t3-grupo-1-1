@@ -85,3 +85,8 @@ html {
    max-height: 90%;
    margin-bottom: 30px;
 }
+
+#SaldoFiltrado {
+   font-size: 1.5rem;
+   text-align: center;
+}

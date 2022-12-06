@@ -1,21 +1,29 @@
+var dbd = JSON.parse(localStorage.getItem('db_Registros'));
+if (!dbd) {
+    dbd = db
+};
+
+var index;
+
 function ApresentarLançamentos() {
     let tbBody = document.getElementById('tbRegistros');
     tbBody.innerHTML = '';
     var saldoAtual = 0;
-
+    var qtde = 0
     if(document.getElementById('date-graphicI').value ==='' || document.getElementById('date-graphicF').value ==='') {
-        for ( i=0; i < db.registros.length; i++ ) {
-            var strData = db.registros[i].Data;
+        for ( i=0; i < dbd.registros.length; i++ ) {
+            var strData = dbd.registros[i].Data;
             var partesData = strData.split("/");
             var dataL = new Date(partesData[2], partesData[1] - 1, partesData[0]);
             var valor = 0
             
-            if(db.registros[i].ES === 'S'){
-                valor = valor - Number(db.registros[i].Valor);
+            if(dbd.registros[i].ES === 'S'){
+                valor = valor - Number(dbd.registros[i].Valor);
             } else {
-                valor = valor + Number(db.registros[i].Valor);
+                valor = valor + Number(dbd.registros[i].Valor);
             }
 
+            qtde += 1
             saldoAtual += valor
 
             let tr = tbBody.insertRow();
@@ -26,16 +34,16 @@ function ApresentarLançamentos() {
             let tdNatureza = tr.insertCell();
             let tdTipo = tr.insertCell();
         
-            tdCodigo.innerText = db.registros[i].Cod;
-            tdData.innerText = db.registros[i].Data;
-            tdDescriçao.innerText = db.registros[i].Descriçao;
+            tdCodigo.innerText = dbd.registros[i].Cod;
+            tdData.innerText = dbd.registros[i].Data;
+            tdDescriçao.innerText = dbd.registros[i].Descriçao;
             tdValor.innerText = Number(valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-            tdNatureza.innerText = db.registros[i].Natureza;
-            tdTipo.innerText = db.registros[i].ES;    
+            tdNatureza.innerText = dbd.registros[i].Natureza;
+            tdTipo.innerText = dbd.registros[i].ES;    
         }
     } else {
-        for ( i=0; i < db.registros.length; i++ ) {
-            var strData = db.registros[i].Data;
+        for ( i=0; i < dbd.registros.length; i++ ) {
+            var strData = dbd.registros[i].Data;
             var partesData = strData.split("/");
             var dataL = new Date(partesData[2], partesData[1] - 1, partesData[0]);
             var valor = 0
@@ -53,12 +61,13 @@ function ApresentarLançamentos() {
 
             if(dataL >= dataI && dataL <= dataF){
 
-                if(db.registros[i].ES === 'S'){
-                    valor = valor - Number(db.registros[i].Valor);
+                if(dbd.registros[i].ES === 'S'){
+                    valor = valor - Number(dbd.registros[i].Valor);
                 } else {
-                    valor = valor + Number(db.registros[i].Valor);
+                    valor = valor + Number(dbd.registros[i].Valor);
                 }
                 saldoAtual += valor
+                qtde += 1
 
                 let tr = tbBody.insertRow();
                 let tdCodigo = tr.insertCell();
@@ -68,15 +77,41 @@ function ApresentarLançamentos() {
                 let tdNatureza = tr.insertCell();
                 let tdTipo = tr.insertCell();
                 
-                tdCodigo.innerText = db.registros[i].Cod;
-                tdData.innerText = db.registros[i].Data;
-                tdDescriçao.innerText = db.registros[i].Descriçao;
+                tdCodigo.innerText = dbd.registros[i].Cod;
+                tdData.innerText = dbd.registros[i].Data;
+                tdDescriçao.innerText = dbd.registros[i].Descriçao;
                 tdValor.innerText = Number(valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-                tdNatureza.innerText = db.registros[i].Natureza;
-                tdTipo.innerText = db.registros[i].ES;                        
+                tdNatureza.innerText = dbd.registros[i].Natureza;
+                tdTipo.innerText = dbd.registros[i].ES;                        
             }
         }
     }
     saldoAtual = Number(saldoAtual).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    
-    document.getElementById('SaldoFiltrado').value = saldoAtual;
+    document.getElementById('SaldoFiltrado').value = ` --------------------- Saldo dos ${qtde} Lançamentos no montante de: ${saldoAtual} --------------------- `;
+    SelecionarRegistro();
+}
+var _codigoEdiçao;
+var _tipo;
+var _descricao;
+var _valor;
+var _data;
+var _natureza;
+
+function SelecionarRegistro(){
+    var tbOrigem = document.getElementById('tbParaEdicao');
+    for(var i=0; i<tbOrigem.rows.length; i++){
+        tbOrigem.rows[i].onclick = function(){
+            index = this.rowIndex;
+            _codigoEdiçao = tbOrigem.rows[index].cells[0].innerText;
+            _tipo = tbOrigem.rows[index].cells[5].innerText;
+            _descricao = tbOrigem.rows[index].cells[2].innerText
+            _valor = tbOrigem.rows[index].cells[3].innerText;
+            _natureza = tbOrigem.rows[index].cells[4].innerText;
+            EscolherRegistro()
+        }
+    }
+}
+
+function EscolherRegistro(){
+    sessionStorage.setItem('chaveCod', _codigoEdiçao);
 }

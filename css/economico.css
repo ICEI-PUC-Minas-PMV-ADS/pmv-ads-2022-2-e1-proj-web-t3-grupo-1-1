@@ -13,6 +13,7 @@ html {
 
  #body-container {
     height: 100%;
+    max-height: 92vh;
     display: flex;
     flex-direction: column;
     padding: 58px 10px 58px 10px;
@@ -21,8 +22,7 @@ html {
  #menu-content {
     padding-top: 15px;
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    height: 95%;
     width: 100%;
  }
 
@@ -37,25 +37,19 @@ html {
     padding: 0 30px;
  }
 
-  #content-filter label {
-   font-size: 1.2rem;
-   width: 98%;
-   text-align: center;
- }
-
- #menu-content section {
+ #content{
    padding: 0 5px 5px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 60%;
  }
 
- #content-table, #content-filter {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
+ #data-graphic-economico{
+   padding: 0px 5px 5px 15px;
+   display: flex;
    height: 100%;
    width: 100%;
- }
-
- .table {
-   margin-bottom: 0;
  }
 
  .filter-date {
@@ -63,7 +57,7 @@ html {
  }
 
  .calendar-date {
-    width: 80%;
+    width: 100%;
     align-items: center;
  }
 
@@ -83,6 +77,22 @@ html {
     padding: 20px 100px 20px 80px;
   }
 
+  .table-wrapper {
+   overflow-y: auto;
+   max-height: 90%;
+   margin-bottom: 30px;
+  }
 
+  .pesquisaMe{
+   width: 40px;
+  }
+  
+  .pesquisaMed{
+   width: 100px;
+  }
+
+  .pesquisaMa{
+   width: 140px;
+  }
   /* https://www.alura.com.br/conteudo/google-charts-criando-graficos-para-a-web */
   

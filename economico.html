@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/economico.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/js/lancamentos.js"></script>
     <script src="/js/economico.js"></script>
     <title>Painel Econômico</title>
 </head>
@@ -40,15 +41,16 @@
                     <label for="">Filtrar por data? Selecione o período.</label>
                     <div class="filter-date">
                         <input type="date" name="date-graphicI" id="date-graphicI" title="Data Inicial do Gráfico">
-                        <strong>a</strong>
+                        <strong> a </strong>
                         <input type="date" name="date-graphicF" id="date-graphicF" title="Data Final do Gráfico">
                     </div>
                 </div>
-                <div id="botao-filtrar"><input class="btn btn-outline-info btn-lg" type="button" value="Filtrar"></div>
+                <div id="botao-filtrar"><input class="btn btn-outline-info btn-lg" type="button" value="Filtrar" onclick=ApresentarResultado()></div>
             </div>
-                
+
+               
             <div id="menu-content">
-                <section id="content-filter">
+                <div id="content">
                     <div>
                         <label for=""><strong>Escolher os parâmetros para filtrar</strong></label>
                         <table class="table table-striped">
@@ -62,17 +64,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><input class="pesquisaMe" type="text" id="txtcodigo"></td>
+                                    <td><input class="pesquisaMed" type="text" id="txtvalor"></td>
+                                    <td><input class="pesquisaMa" type="text" id="txtnatureza"></td>
+                                    <td><input class="pesquisaMe" type="text" id="txtES"></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </section>
-                <section id="content-table">
-                    <div>
+                    <div class="table-wrapper">
                         <table class="table table-striped table-hover">
                             <thead>
                             <tr>
@@ -83,98 +83,24 @@
                                 <th scope="col">E/C</th>
                             </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Totais</strong></td>
-                                    <td></td>
-                                    <td><strong>R$ 0,00</strong></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
+                            <tbody id="tbResultado">
                             </tbody>
                         </table>
                     </div>
-                    <div id="data-graphic-economico"></div>
-                </section>
+                    <p><input type="text" class="form-control" type="text" readonly id="ResultadoFinal"></p>
+                </div>
+                <div id="data-graphic-economico"></div>
             </div>
         </div>
-            
-            <div class="fixed-bottom">
-                <footer class="card-footer">
-                    <h6>RODAPÉ DA PÁGINA</h6>
-                </footer>
-            </div>
+        <script>
+            Graficar()
+            ApresentarResultado()
+        </script>
+        <div class="fixed-bottom">
+            <footer class="card-footer">
+                <h6>RODAPÉ DA PÁGINA</h6>
+            </footer>
+        </div>
     </div>                
 </body>
 </html>

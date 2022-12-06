@@ -51,7 +51,7 @@
                 <div id="content-table">
                     <label for=""><strong>Lançamentos efetuados! Verifique os Filtros aplicados.</strong></label>
                     <div class="table-wrapper">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover" id="tbParaEdicao">
                             <thead>
                             <tr>
                                 <th scope="col">Cód</th>
@@ -65,8 +65,11 @@
                             <tbody id="tbRegistros">
                             </tbody>
                         </table>
+                        <script>
+                            SelecionarRegistro();
+                        </script>
                     </div>
-                    <input type="text" id="SaldoFiltrado">
+                    <input type="text" class="form-control" type="text" readonly id="SaldoFiltrado">
                 </div>
             </div>
         </div>
