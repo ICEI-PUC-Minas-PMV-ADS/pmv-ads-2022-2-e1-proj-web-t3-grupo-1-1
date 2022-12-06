@@ -50,5 +50,8 @@ function LançarRegistro(){
         "natureza" : _natureza,
         "tipo": _tipo,
     }
+    alert("Registro incluído com Sucesso!!")
     insertRegistro(_registro);
+    Cancelar();
+
 }
