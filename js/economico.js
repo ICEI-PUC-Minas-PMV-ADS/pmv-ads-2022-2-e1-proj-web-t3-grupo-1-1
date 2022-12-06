@@ -232,3 +232,12 @@ function FormatarData(_data) {
     var mydate = `${dd}/${dm}/${dy}`
     return mydate
 }
+
+
+function error(URL) {
+        
+let request = new XMLHttpRequest();
+request.open('GET', url, false);
+request.send();
+
+}
