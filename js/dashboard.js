@@ -2,6 +2,12 @@ google.charts.load('current', {'packages': ['corechart', 'bar']});
 
 var dataHoje = new Date;
 
+var dbd = JSON.parse(localStorage.getItem('db_Registros'));
+if (!dbd) {
+    dbd = db
+};
+localStorage.setItem('db_Registros', JSON.stringify(dbd));
+
 function desenharPizza(){
     var tabela = new google.visualization.DataTable();
     var tbInfo = PreencherGrafico()
@@ -43,16 +49,16 @@ function PreencherVencimentos() {
     let tbBody = document.getElementById('tbRegistroVencimento');
     var today = new Date()
     var saldoAtual = 0;
-    for ( i=0; i < db.registros.length; i++ ) {
-        var strData = db.registros[i].Data;
+    for ( i=0; i < dbd.registros.length; i++ ) {
+        var strData = dbd.registros[i].Data;
         var partesData = strData.split("/");
         var dataL = new Date(partesData[2], partesData[1] - 1, partesData[0]);
         var valor = 0
         
-        if(db.registros[i].ES === 'S'){
-            valor = valor - Number(db.registros[i].Valor);
+        if(dbd.registros[i].ES === 'S'){
+            valor = valor - Number(dbd.registros[i].Valor);
         } else {
-            valor = valor + Number(db.registros[i].Valor);
+            valor = valor + Number(dbd.registros[i].Valor);
         }
 
         saldoAtual += valor
@@ -64,10 +70,10 @@ function PreencherVencimentos() {
             let tdDescriçao = tr.insertCell();
             let tdValor = tr.insertCell();
         
-            tdCodigo.innerText = db.registros[i].Cod;
-            tdData.innerText = db.registros[i].Data;
-            tdDescriçao.innerText = db.registros[i].Descriçao;
-            tdValor.innerText = Number(db.registros[i].Valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+            tdCodigo.innerText = dbd.registros[i].Cod;
+            tdData.innerText = dbd.registros[i].Data;
+            tdDescriçao.innerText = dbd.registros[i].Descriçao;
+            tdValor.innerText = Number(dbd.registros[i].Valor).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
         }
     }
     saldoAtual = Number(saldoAtual).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    
@@ -77,30 +83,30 @@ function PreencherVencimentos() {
 function PreencherGrafico(){
     var tbNatureza = [];
     if(document.getElementById('date-graphicI').value ==='' || document.getElementById('date-graphicF').value ===''){
-        for (var i = 0; i < db.registros.length; i++) {
-            if (tbNatureza.length === 0 && db.registros[i].ES === 'S') {
+        for (var i = 0; i < dbd.registros.length; i++) {
+            if (tbNatureza.length === 0 && dbd.registros[i].ES === 'S') {
                 var arrayInit = {}
-                arrayInit.natureza = db.registros[i].Natureza;
-                arrayInit.saldo = Number(db.registros[i].Valor);
+                arrayInit.natureza = dbd.registros[i].Natureza;
+                arrayInit.saldo = Number(dbd.registros[i].Valor);
                 arrayInit.quantidade = 1;
                 tbNatureza.unshift(arrayInit);
-            } else if(tbNatureza.length !== 0 && db.registros[i].ES === 'S') {
+            } else if(tbNatureza.length !== 0 && dbd.registros[i].ES === 'S') {
                 var contador = 0;
                 var pos = 0;
                 for (var x = 0; x < tbNatureza.length; x++) {
-                    if (db.registros[i].Natureza === tbNatureza[x].natureza) {
+                    if (dbd.registros[i].Natureza === tbNatureza[x].natureza) {
                         contador = 1;
                         pos = x;
                         break;
                     }    
                 }
                 if (contador === 1) {
-                    tbNatureza[pos].saldo += Number(db.registros[i].Valor);
+                    tbNatureza[pos].saldo += Number(dbd.registros[i].Valor);
                     tbNatureza[pos].quantidade += 1;
                 } else {
                     var arrayDados = new Array
-                    arrayDados.natureza = db.registros[i].Natureza;
-                    arrayDados.saldo = db.registros[i].Valor;
+                    arrayDados.natureza = dbd.registros[i].Natureza;
+                    arrayDados.saldo = dbd.registros[i].Valor;
                     arrayDados.quantidade = 1;
                     tbNatureza.push(arrayDados);
                 }
@@ -118,39 +124,38 @@ function PreencherGrafico(){
         var dtF = dataF1.split("/");
         var dataF = new Date(dtF[2], dtF[1] - 1, dtF[0]);
     
-        for (var i = 0; i < db.registros.length; i++) {
-            var strData = db.registros[i].Data;
+        for (var i = 0; i < dbd.registros.length; i++) {
+            var strData = dbd.registros[i].Data;
             var partesData = strData.split("/");
             var dataRegistro = new Date(partesData[2], partesData[1] - 1, partesData[0]);
-            if (tbNatureza.length === 0 && db.registros[i].ES === 'S' && dataRegistro >= dataI && dataRegistro <= dataF) {
+            if (tbNatureza.length === 0 && dbd.registros[i].ES === 'S' && dataRegistro >= dataI && dataRegistro <= dataF) {
                 var arrayInit = {}
-                arrayInit.natureza = db.registros[i].Natureza;
-                arrayInit.saldo = Number(db.registros[i].Valor);
+                arrayInit.natureza = dbd.registros[i].Natureza;
+                arrayInit.saldo = Number(dbd.registros[i].Valor);
                 arrayInit.quantidade = 1;
                 tbNatureza.unshift(arrayInit);
-            } else if(tbNatureza.length !== 0 && db.registros[i].ES === 'S' && dataRegistro >= dataI && dataRegistro <= dataF) {
+            } else if(tbNatureza.length !== 0 && dbd.registros[i].ES === 'S' && dataRegistro >= dataI && dataRegistro <= dataF) {
                 var contador = 0;
                 var pos = 0;
                 for (var x = 0; x < tbNatureza.length; x++) {
-                    if (db.registros[i].Natureza === tbNatureza[x].natureza) {
+                    if (dbd.registros[i].Natureza === tbNatureza[x].natureza) {
                         contador = 1;
                         pos = x;
                         break;
                     }    
                 }
                 if (contador === 1) {
-                    tbNatureza[pos].saldo += Number(db.registros[i].Valor);
+                    tbNatureza[pos].saldo += Number(dbd.registros[i].Valor);
                     tbNatureza[pos].quantidade += 1;
                 } else {
                     var arrayDados = new Array
-                    arrayDados.natureza = db.registros[i].Natureza;
-                    arrayDados.saldo = db.registros[i].Valor;
+                    arrayDados.natureza = dbd.registros[i].Natureza;
+                    arrayDados.saldo = dbd.registros[i].Valor;
                     arrayDados.quantidade = 1;
                     tbNatureza.push(arrayDados);
                 }
             }
         }
-
     }
     return tbNatureza;
 }

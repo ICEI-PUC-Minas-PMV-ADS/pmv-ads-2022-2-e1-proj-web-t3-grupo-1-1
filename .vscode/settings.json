@@ -8,9 +8,12 @@
         "opcoes"
     ],
     "cSpell.ignoreWords": [
+        "Alteraçao",
         "Codigo",
         "Descriçao",
         "ENTRAR",
+        "Edicao",
+        "Ediçao",
         "Entrada",
         "Figura",
         "Graficar",
@@ -21,6 +24,7 @@
         "adrielle",
         "calendario",
         "choise",
+        "codigo",
         "coloboradores",
         "conteudo",
         "descricao",
@@ -28,11 +32,17 @@
         "economico",
         "lancamento",
         "lancamentos",
+        "multiplos",
         "mydate",
         "padstart",
+        "qtde",
         "rafiki",
         "remilton",
-        "salarios"
+        "salarios",
+        "txtcod",
+        "txtcodigo",
+        "txtnatureza",
+        "txtvalor"
     ],
     "cSpell.language": "pt-BR,pt,en,en-GB,en-US,lorem"
 }
